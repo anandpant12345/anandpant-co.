@@ -1,0 +1,120 @@
+.audience-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.audience-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.audience-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 40px 30px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.audience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.audience-card-front {
+  text-align: center;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transform: translateY(0);
+  width: 100%;
+}
+
+.audience-card:hover .audience-card-front {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.audience-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; /* Inherits pastel color from inline style */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 2;
+  padding: 30px;
+}
+
+/* Add a very subtle white gradient over the inherited pastel to make the overlay pop */
+.audience-card-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+  z-index: -1;
+}
+
+.audience-card:hover .audience-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.audience-icon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.audience-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primary-dark, #1a202c);
+  margin-bottom: 0.75rem;
+}
+
+.audience-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary, #4a5568);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.audience-title-overlay {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-dark, #1a202c);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Make sure the button stands out on the pastel background */
+.audience-card-overlay .btn-primary {
+  box-shadow: 0 8px 16px rgba(0, 102, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.audience-card-overlay .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0, 102, 255, 0.3);
+}
