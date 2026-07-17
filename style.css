@@ -4802,14 +4802,14 @@ hr {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 24px;
-  padding: 120px 240px;
+  padding: 30px 60px;
   font-weight: 700;
   font-size: 1rem;
   color: #475569;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 1000px;
+  min-width: 280px;
   flex-shrink: 0;
   box-shadow: 0 4px 16px rgba(0,0,0,0.04);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -4821,7 +4821,7 @@ hr {
 }
 
 .brand-logo-box img {
-  max-height: 280px;
+  height: 80px;
   max-width: 100%;
   object-fit: contain;
   filter: none !important;
@@ -4920,14 +4920,14 @@ hr {
 /* Responsive Brand Logo Box sizing for mobile */
 @media (max-width: 768px) {
   .brand-logo-box {
-    min-width: 640px !important;
-    padding: 60px 120px !important;
+    min-width: 160px !important;
+    padding: 15px 30px !important;
     border-radius: 16px !important;
     flex-shrink: 0 !important;
   }
   
   .brand-logo-box img {
-    max-height: 200px !important;
+    height: 40px !important;
   }
 }
 
