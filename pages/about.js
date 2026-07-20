@@ -99,7 +99,7 @@ export default {
                   </div>
                   <div style="border-top: 1px solid #e2e8f0; padding-top: 8px;">
                     <strong style="color: #0f172a; display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">Email</strong>
-                    <a href="mailto:info@apandco.in" style="color: #2563eb; text-decoration: none; font-weight: 600;">info@apandco.in</a>
+                    <a href="mailto:info@apaco.in" style="color: #2563eb; text-decoration: none; font-weight: 600;">info@apaco.in</a>
                   </div>
                   <div style="border-top: 1px solid #e2e8f0; padding-top: 8px;">
                     <strong style="color: #0f172a; display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">Office Hours</strong>

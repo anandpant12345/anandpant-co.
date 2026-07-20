@@ -15,6 +15,7 @@ const routes = {
   '/tax-guides':         { module: './pages/tax-guides.js',          title: 'Tax Guides' },
   '/about':              { module: './pages/about.js',               title: 'About Us' },
   '/privacy-policy':     { module: './pages/privacy-policy.js',      title: 'Privacy Policy' },
+  '/contact':            { module: './pages/contact.js',             title: 'Contact Us' },
 };
 
 // ── Global State ─────────────────────────────────────────────────────────────
@@ -466,7 +467,7 @@ function getFooterHTML() {
             <div class="footer-heading">Company</div>
             <div class="footer-links">
               <a href="#/about">About Us</a>
-              <a href="#" onclick="event.preventDefault(); window.openLeadModal();">Contact</a>
+              <a href="#/contact">Contact</a>
               <a href="#/privacy-policy">Privacy Policy</a>
             </div>
           </div>

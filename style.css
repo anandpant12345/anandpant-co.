@@ -5032,3 +5032,151 @@ hr {
     text-align: center !important;
   }
 }
+
+/* Contact Page Responsive Office Card */
+.contact-office-wrapper {
+  background-color: #f8fafc;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.contact-office-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 840px;
+  border-radius: 20px;
+  padding: 48px 52px;
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.contact-office-title {
+  text-align: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.contact-office-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.contact-office-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-office-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.contact-pin-icon {
+  width: 20px;
+  height: 20px;
+  color: #e11d48;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.contact-office-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.contact-office-address {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.contact-office-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.contact-info-box {
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-phone-icon {
+  width: 22px;
+  height: 22px;
+  color: #e11d48;
+  flex-shrink: 0;
+}
+
+.contact-info-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.contact-info-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.contact-info-value {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-info-value:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-office-wrapper {
+    padding: 30px 16px;
+  }
+  .contact-office-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+  .contact-office-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  .contact-office-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

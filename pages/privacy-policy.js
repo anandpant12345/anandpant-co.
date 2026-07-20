@@ -73,7 +73,7 @@ export default {
                 <li>The right to seek information and summary of your personal data processed.</li>
                 <li>The right to request correction or updating of inaccurate records.</li>
                 <li>The right to withdraw consent at any time for non-statutory communication.</li>
-                <li>The right to file a grievance to our Data Protection Officer at <strong>privacy@apandco.in</strong>.</li>
+                <li>The right to file a grievance to our Data Protection Officer at <strong>privacy@apaco.in</strong>.</li>
               </ul>
             </div>
 

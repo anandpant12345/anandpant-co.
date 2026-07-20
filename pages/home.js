@@ -60,24 +60,32 @@ function render() {
             
             <!-- The Two CTAs Side-by-Side -->
             <div class="hero-cta-boxes">
-              <div class="hero-cta-box" style="background: radial-gradient(circle at top left, #fff7ed 0%, #ffffff 60%); border: 1px solid #ffedd5;">
+              <div class="hero-cta-box" style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                  <div class="cta-box-icon"><img src="./images/file-icon.jpg" alt="File Tax Icon" style="width: 48px; height: 48px; object-fit: contain;" /></div>
-                  <h3 class="cta-box-title">File your taxes</h3>
-                  <p class="cta-box-desc">In 3 simple steps</p>
+                  <div class="cta-box-icon" style="background: #eff6ff; padding: 10px; border-radius: 12px; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 12px;">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  </div>
+                  <h3 class="cta-box-title" style="font-size: 1.1rem; font-weight: 700; color: #0f172a; margin: 0;">File your taxes</h3>
+                  <p class="cta-box-desc" style="font-size: 0.82rem; color: #64748b; margin: 2px 0 14px;">In 3 simple steps</p>
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; margin-top: 16px;">
-                  <a href="#/services/individual" class="btn btn-primary" style="padding: 10px 4px; font-size: 0.82rem; font-weight: 600; text-align: center; justify-content: center; width: 100%; white-space: nowrap; box-sizing: border-box;">Individual</a>
-                  <a href="#/services/business" class="btn btn-primary" style="padding: 10px 4px; font-size: 0.82rem; font-weight: 600; text-align: center; justify-content: center; width: 100%; white-space: nowrap; box-sizing: border-box;">Business</a>
+                <div style="display: flex; background: #f1f5f9; padding: 4px; border-radius: 10px; gap: 4px; border: 1px solid #e2e8f0;">
+                  <a href="#/services/individual" style="flex: 1; text-align: center; padding: 9px 8px; background: #2563eb; color: #ffffff; font-weight: 600; font-size: 0.82rem; border-radius: 7px; text-decoration: none; box-shadow: 0 2px 4px rgba(37,99,235,0.2); display: flex; align-items: center; justify-content: center; gap: 5px; transition: all 0.2s ease;">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Individual
+                  </a>
+                  <a href="#/services/business" style="flex: 1; text-align: center; padding: 9px 8px; background: #ffffff; color: #1e293b; font-weight: 600; font-size: 0.82rem; border-radius: 7px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid #cbd5e1; transition: all 0.2s ease;" onmouseover="this.style.background='#2563eb'; this.style.color='#ffffff'; this.style.borderColor='#2563eb';" onmouseout="this.style.background='#ffffff'; this.style.color='#1e293b'; this.style.borderColor='#cbd5e1';">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M8 10h.01M16 10h.01M12 14h.01M8 14h.01M16 14h.01"></path></svg> Business
+                  </a>
                 </div>
               </div>
-              <div class="hero-cta-box" style="background: radial-gradient(circle at top left, #fef2f2 0%, #ffffff 60%); border: 1px solid #fee2e2;" onclick="event.preventDefault(); window.openLeadModal();">
+              <div class="hero-cta-box" style="background: #ffffff; border: 1.5px solid #fee2e2; border-radius: 16px; padding: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;" onclick="event.preventDefault(); window.openLeadModal();">
                 <div>
-                  <div class="cta-box-icon"><img src="./images/user-icon.png" alt="Expert File Icon" style="width: 48px; height: 48px; object-fit: contain;" /></div>
-                  <h3 class="cta-box-title">Expert files for you</h3>
-                  <p class="cta-box-desc">ITR filed in 24hrs</p>
+                  <div class="cta-box-icon" style="background: #fef2f2; padding: 10px; border-radius: 12px; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-bottom: 12px;">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                  </div>
+                  <h3 class="cta-box-title" style="font-size: 1.1rem; font-weight: 700; color: #0f172a; margin: 0;">Expert files for you</h3>
+                  <p class="cta-box-desc" style="font-size: 0.82rem; color: #64748b; margin: 2px 0 14px;">ITR filed in 24hrs</p>
                 </div>
-                <button class="btn btn-primary w-full">Hire an Expert</button>
+                <button class="btn btn-primary w-full" style="padding: 10px; font-weight: 600; border-radius: 8px; width: 100%; justify-content: center;">Hire an Expert</button>
               </div>
             </div>
           </div>
