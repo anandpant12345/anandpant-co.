@@ -26,10 +26,16 @@ export default {
           <h2 class="heading-lg text-center reveal" style="margin-bottom: 48px;">Our Individual Tax Services</h2>
 
           <div class="service-grid">
-
             <!-- ITR-1 (Sahaj) -->
             <div class="card card-hover service-detail-card reveal">
-              <div class="card-icon card-icon-success">📄</div>
+              <div class="card-icon" style="background-color: #eff6ff; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px;">
+                <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H28L36 14V34C36 37.3137 33.3137 40 30 40H14C10.6863 40 8 37.3137 8 34V12C8 8.68629 10.6863 6 14 6Z" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M28 6V14H36" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="32" cy="32" r="9" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+                  <path d="M28 32L31 35L36 29" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3 class="card-title">ITR-1 (Sahaj)</h3>
               <p class="heading-sm" style="color: var(--accent-primary, #6c63ff); margin-bottom: 8px;">Salary Income Filing</p>
               <p class="card-text">For salaried individuals with income up to ₹50 lakhs from single employer</p>
@@ -42,14 +48,22 @@ export default {
               <div class="card-footer">
                 <div>
                   <span class="font-mono" style="font-size: 1.75rem; font-weight: 700; color: #1a1a1a;">₹499</span>
-                                  </div>
+                </div>
                 <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-sm btn-primary">Hire an Expert Now</a>
               </div>
             </div>
 
             <!-- ITR-2 -->
             <div class="card card-hover service-detail-card reveal reveal-delay-1">
-              <div class="card-icon card-icon-gold">📈</div>
+              <div class="card-icon" style="background-color: #f0fdf4; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px;">
+                <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H28L36 14V34C36 37.3137 33.3137 40 30 40H14C10.6863 40 8 37.3137 8 34V12C8 8.68629 10.6863 6 14 6Z" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M28 6V14H36" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 32L22 25L26 29L32 21" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27 21H32V26" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="32" cy="21" r="3" fill="#bfdbfe"/>
+                </svg>
+              </div>
               <h3 class="card-title">ITR-2</h3>
               <p class="heading-sm" style="color: var(--accent-primary, #6c63ff); margin-bottom: 8px;">Capital Gains &amp; More</p>
               <p class="card-text">For individuals with capital gains, multiple properties, or foreign income</p>
@@ -62,14 +76,21 @@ export default {
               <div class="card-footer">
                 <div>
                   <span class="font-mono" style="font-size: 1.75rem; font-weight: 700; color: #1a1a1a;">₹899</span>
-                                  </div>
+                </div>
                 <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-sm btn-primary">Hire an Expert Now</a>
               </div>
             </div>
 
             <!-- ITR-3 -->
             <div class="card card-hover service-detail-card reveal reveal-delay-2">
-              <div class="card-icon card-icon-warning">💼</div>
+              <div class="card-icon" style="background-color: #ecfeff; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px;">
+                <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H28L36 14V36C36 38.2091 34.2091 40 32 40H14C11.7909 40 10 38.2091 10 36V10C10 7.79086 11.7909 6 14 6Z" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="16" y="27" width="4" height="8" rx="1" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                  <rect x="23" y="21" width="4" height="14" rx="1" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                  <rect x="30" y="17" width="4" height="18" rx="1" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                </svg>
+              </div>
               <h3 class="card-title">ITR-3</h3>
               <p class="heading-sm" style="color: var(--accent-primary, #6c63ff); margin-bottom: 8px;">Business &amp; Professional Income</p>
               <p class="card-text">For professionals and business owners filing detailed returns</p>
@@ -82,14 +103,24 @@ export default {
               <div class="card-footer">
                 <div>
                   <span class="font-mono" style="font-size: 1.75rem; font-weight: 700; color: #1a1a1a;">₹999</span>
-                                  </div>
+                </div>
                 <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-sm btn-primary">Hire an Expert Now</a>
               </div>
             </div>
 
             <!-- ITR-4 (Sugam) -->
             <div class="card card-hover service-detail-card reveal">
-              <div class="card-icon card-icon-success">🏪</div>
+              <div class="card-icon" style="background-color: #fff7ed; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px;">
+                <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="6" width="22" height="34" rx="5" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 15H22" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M14 21H19" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="32" cy="31" r="9" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+                  <path d="M29 28L35 34" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="30" cy="33" r="1.5" fill="#2563eb"/>
+                  <circle cx="34" cy="29" r="1.5" fill="#2563eb"/>
+                </svg>
+              </div>
               <h3 class="card-title">ITR-4 (Sugam)</h3>
               <p class="heading-sm" style="color: var(--accent-primary, #6c63ff); margin-bottom: 8px;">Presumptive Income</p>
               <p class="card-text">For small businesses and professionals under presumptive taxation scheme</p>
@@ -102,14 +133,22 @@ export default {
               <div class="card-footer">
                 <div>
                   <span class="font-mono" style="font-size: 1.75rem; font-weight: 700; color: #1a1a1a;">₹499</span>
-                                  </div>
+                </div>
                 <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-sm btn-primary">Hire an Expert Now</a>
               </div>
             </div>
 
             <!-- NRI Tax Filing -->
             <div class="card card-hover service-detail-card reveal reveal-delay-1">
-              <div class="card-icon card-icon-gold">🌏</div>
+              <div class="card-icon" style="background-color: #f3e8ff; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px;">
+                <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="22" r="13" stroke="#2563eb" stroke-width="3"/>
+                  <path d="M8 22H32" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M20 9C23.5 13 25 17.5 25 22C25 26.5 23.5 31 20 35" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M20 9C16.5 13 15 17.5 15 22C15 26.5 16.5 31 20 35" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M30 35L33 28L39 31L36 36L40 40L36 41L32 38L29 41L30 35Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3 class="card-title">NRI Tax Filing</h3>
               <p class="heading-sm" style="color: var(--accent-primary, #6c63ff); margin-bottom: 8px;">Non-Resident Indian Filing</p>
               <p class="card-text">Specialized tax filing for NRIs with Indian and foreign income</p>
@@ -123,14 +162,22 @@ export default {
               <div class="card-footer">
                 <div>
                   <span class="font-mono" style="font-size: 1.75rem; font-weight: 700; color: #1a1a1a;">₹2,499</span>
-                                  </div>
+                </div>
                 <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-sm btn-primary">Hire an Expert Now</a>
               </div>
             </div>
 
             <!-- Capital Gains Tax -->
             <div class="card card-hover service-detail-card reveal reveal-delay-2">
-              <div class="card-icon card-icon-warning">📊</div>
+              <div class="card-icon" style="background-color: #eff6ff; display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px;">
+                <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="19" cy="14" r="6" stroke="#2563eb" stroke-width="3"/>
+                  <path d="M7 35C7 28.9249 11.9249 24 18 24C21 24 23.7 25.2 25.7 27.1" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M18 24V29L20 31L18 35" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                  <circle cx="33" cy="33" r="8" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+                  <path d="M29 33L32 36L37 30" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <h3 class="card-title">Capital Gains Tax</h3>
               <p class="heading-sm" style="color: var(--accent-primary, #6c63ff); margin-bottom: 8px;">Investment Tax Filing</p>
               <p class="card-text">Expert handling of stocks, mutual funds, crypto and property transactions</p>
@@ -144,9 +191,10 @@ export default {
               <div class="card-footer">
                 <div>
                   <span class="font-mono" style="font-size: 1.75rem; font-weight: 700; color: #1a1a1a;">₹1,499</span>
-                                  </div>
+                </div>
                 <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-sm btn-primary">Hire an Expert Now</a>
               </div>
+            </div>            </div>
             </div>
 
           </div>
@@ -156,7 +204,7 @@ export default {
       <!-- ========== WHY CHOOSE US ========== -->
       <section class="section section-light">
         <div class="container">
-          <h2 class="heading-lg text-center reveal" style="margin-bottom: 48px;">Why 25,000+ Individuals Trust Us</h2>
+          <h2 class="heading-lg text-center reveal" style="margin-bottom: 48px;">Why 10,000+ Individuals Trust Us</h2>
 
           <div class="grid-4">
             <div class="card card-hover reveal" style="text-align: left; padding: 32px 24px; border-top: 4px solid var(--accent-primary, #6c63ff); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
@@ -200,11 +248,11 @@ export default {
           <div class="cta-banner reveal">
             <h2 class="heading-lg" style="color: white;">Ready to File Your ITR?</h2>
             <p class="text-lg" style="margin: 16px 0 32px; opacity: 0.9;">
-              Join 25,000+ individuals who trust us with their tax filings. Get expert assistance from certified CAs at the most competitive prices.
+              Join 10,000+ individuals who trust us with their tax filings. Get expert assistance from certified CAs at the most competitive prices.
             </p>
-            <div class="flex-center" style="gap: 16px; flex-wrap: wrap;">
-              <a href="#start-filing" class="btn btn-primary btn-lg">Start Filing →</a>
-              <a href="#talk-expert" class="btn btn-outline-white btn-lg">Talk to Expert</a>
+            <div class="flex-center" style="gap: 16px; flex-wrap: wrap; display: flex; justify-content: center;">
+              <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-primary btn-lg">Start Filing →</a>
+              <a href="#" onclick="event.preventDefault(); window.openLeadModal();" class="btn btn-outline-white btn-lg">Talk to Expert</a>
             </div>
           </div>
         </div>

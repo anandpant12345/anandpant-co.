@@ -1,5 +1,6 @@
 // pages/home.js - Anand Pant & Company Landing Page
 let carouselInterval = null;
+let coreServicesInterval = null;
 let clickOutsideListener = null;
 
 function render() {
@@ -59,13 +60,16 @@ function render() {
             
             <!-- The Two CTAs Side-by-Side -->
             <div class="hero-cta-boxes">
-              <div class="hero-cta-box" style="background: radial-gradient(circle at top left, #fff7ed 0%, #ffffff 60%); border: 1px solid #ffedd5;" onclick="event.preventDefault(); window.openLeadModal();">
+              <div class="hero-cta-box" style="background: radial-gradient(circle at top left, #fff7ed 0%, #ffffff 60%); border: 1px solid #ffedd5;">
                 <div>
                   <div class="cta-box-icon"><img src="./images/file-icon.jpg" alt="File Tax Icon" style="width: 48px; height: 48px; object-fit: contain;" /></div>
                   <h3 class="cta-box-title">File your taxes</h3>
                   <p class="cta-box-desc">In 3 simple steps</p>
                 </div>
-                <button class="btn btn-primary w-full">Start Filing Now</button>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; margin-top: 16px;">
+                  <a href="#/services/individual" class="btn btn-primary" style="padding: 10px 4px; font-size: 0.82rem; font-weight: 600; text-align: center; justify-content: center; width: 100%; white-space: nowrap; box-sizing: border-box;">Individual</a>
+                  <a href="#/services/business" class="btn btn-primary" style="padding: 10px 4px; font-size: 0.82rem; font-weight: 600; text-align: center; justify-content: center; width: 100%; white-space: nowrap; box-sizing: border-box;">Business</a>
+                </div>
               </div>
               <div class="hero-cta-box" style="background: radial-gradient(circle at top left, #fef2f2 0%, #ffffff 60%); border: 1px solid #fee2e2;" onclick="event.preventDefault(); window.openLeadModal();">
                 <div>
@@ -164,8 +168,13 @@ function render() {
             <div class="audience-card-front">
               <div class="audience-card-header">
                 <h3 class="audience-title">Salaried<br/>Professionals</h3>
-                <div class="audience-icon-wrap" style="background-color: #e6f0ff; color: #0055ff;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <div class="audience-icon-wrap" style="background-color: #eff6ff; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0;">
+                  <svg viewBox="0 0 48 48" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H28L36 14V34C36 37.3137 33.3137 40 30 40H14C10.6863 40 8 37.3137 8 34V12C8 8.68629 10.6863 6 14 6Z" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28 6V14H36" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="32" cy="32" r="9" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+                    <path d="M28 32L31 35L36 29" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
               </div>
               <p class="audience-desc">Simple, accurate filing for every salaried taxpayer</p>
@@ -181,8 +190,14 @@ function render() {
             <div class="audience-card-front">
               <div class="audience-card-header">
                 <h3 class="audience-title">Investors<br/>and Traders</h3>
-                <div class="audience-icon-wrap" style="background-color: #e0f5e7; color: #059669;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                <div class="audience-icon-wrap" style="background-color: #f0fdf4; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0;">
+                  <svg viewBox="0 0 48 48" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H28L36 14V34C36 37.3137 33.3137 40 30 40H14C10.6863 40 8 37.3137 8 34V12C8 8.68629 10.6863 6 14 6Z" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28 6V14H36" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 32L22 25L26 29L32 21" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27 21H32V26" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="32" cy="21" r="3" fill="#bfdbfe"/>
+                  </svg>
                 </div>
               </div>
               <p class="audience-desc">1-click capital gains import from 80+ brokers</p>
@@ -198,8 +213,13 @@ function render() {
             <div class="audience-card-front">
               <div class="audience-card-header">
                 <h3 class="audience-title">Freelancers &<br/>Professionals</h3>
-                <div class="audience-icon-wrap" style="background-color: #ccf0f0; color: #0891b2;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <div class="audience-icon-wrap" style="background-color: #ecfeff; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0;">
+                  <svg viewBox="0 0 48 48" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H28L36 14V36C36 38.2091 34.2091 40 32 40H14C11.7909 40 10 38.2091 10 36V10C10 7.79086 11.7909 6 14 6Z" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="16" y="27" width="4" height="8" rx="1" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                    <rect x="23" y="21" width="4" height="14" rx="1" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                    <rect x="30" y="17" width="4" height="18" rx="1" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                  </svg>
                 </div>
               </div>
               <p class="audience-desc">Consulting fees, TDS deductions, advance tax, etc...</p>
@@ -215,8 +235,16 @@ function render() {
             <div class="audience-card-front">
               <div class="audience-card-header">
                 <h3 class="audience-title">Advanced Traders</h3>
-                <div class="audience-icon-wrap" style="background-color: #ffedd5; color: #ea580c;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <div class="audience-icon-wrap" style="background-color: #fff7ed; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0;">
+                  <svg viewBox="0 0 48 48" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="6" width="22" height="34" rx="5" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 15H22" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M14 21H19" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="32" cy="31" r="9" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+                    <path d="M29 28L35 34" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="30" cy="33" r="1.5" fill="#2563eb"/>
+                    <circle cx="34" cy="29" r="1.5" fill="#2563eb"/>
+                  </svg>
                 </div>
               </div>
               <p class="audience-desc">F&O, intraday or any complex capital gains - An expert files your return.</p>
@@ -232,8 +260,14 @@ function render() {
             <div class="audience-card-front">
               <div class="audience-card-header">
                 <h3 class="audience-title">NRIs & RSU/ESOPs<br/>holders</h3>
-                <div class="audience-icon-wrap" style="background-color: #ede9fe; color: #7c3aed;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <div class="audience-icon-wrap" style="background-color: #f3e8ff; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0;">
+                  <svg viewBox="0 0 48 48" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="22" r="13" stroke="#2563eb" stroke-width="3"/>
+                    <path d="M8 22H32" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M20 9C23.5 13 25 17.5 25 22C25 26.5 23.5 31 20 35" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M20 9C16.5 13 15 17.5 15 22C15 26.5 16.5 31 20 35" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M30 35L33 28L39 31L36 36L40 40L36 41L32 38L29 41L30 35Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
               </div>
               <p class="audience-desc">Protect RSUs/ESOPs gains, foreign income & accurate Schedule FA filing by experts.</p>
@@ -249,8 +283,14 @@ function render() {
             <div class="audience-card-front">
               <div class="audience-card-header">
                 <h3 class="audience-title">Affluent Investors</h3>
-                <div class="audience-icon-wrap" style="background-color: #e6f0ff; color: #2563eb;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                <div class="audience-icon-wrap" style="background-color: #eff6ff; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 18px; flex-shrink: 0;">
+                  <svg viewBox="0 0 48 48" width="68" height="68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="19" cy="14" r="6" stroke="#2563eb" stroke-width="3"/>
+                    <path d="M7 35C7 28.9249 11.9249 24 18 24C21 24 23.7 25.2 25.7 27.1" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M18 24V29L20 31L18 35" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+                    <circle cx="33" cy="33" r="8" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+                    <path d="M29 33L32 36L37 30" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
                 </div>
               </div>
               <p class="audience-desc">From salary to global income, get year-round support from our Tax Specialists</p>
@@ -553,6 +593,7 @@ function init() {
     slides.forEach(slide => sliderTrack.appendChild(slide.cloneNode(true)));
 
     let isDragging = false;
+    let isPausedCore = false;
     let startPos = 0;
     let currentTranslate = 0;
     let prevTranslate = 0;
@@ -599,7 +640,7 @@ function init() {
       if (movedBy < -50) currentIndex += 1;
       if (movedBy > 50) currentIndex -= 1;
       
-      sliderTrack.style.transition = 'transform 0.3s ease-out';
+      sliderTrack.style.transition = 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
       
       // Enforce infinite bounds
       if (currentIndex >= slides.length * 2) {
@@ -609,7 +650,7 @@ function init() {
            currentTranslate = -currentIndex * getSlideWidth();
            prevTranslate = currentTranslate;
            setSliderPosition();
-         }, 300);
+         }, 600);
       } else if (currentIndex <= 0) {
          currentIndex = slides.length;
          setTimeout(() => {
@@ -617,7 +658,7 @@ function init() {
            currentTranslate = -currentIndex * getSlideWidth();
            prevTranslate = currentTranslate;
            setSliderPosition();
-         }, 300);
+         }, 600);
       }
 
       currentTranslate = -currentIndex * slideWidth;
@@ -625,13 +666,39 @@ function init() {
       setSliderPosition();
     }
 
+    function autoSwipeCore() {
+      if (isDragging || isPausedCore) return;
+      currentIndex += 1;
+      sliderTrack.style.transition = 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
+      const slideWidth = getSlideWidth();
+      currentTranslate = -currentIndex * slideWidth;
+      prevTranslate = currentTranslate;
+      setSliderPosition();
+
+      if (currentIndex >= slides.length * 2) {
+        setTimeout(() => {
+          sliderTrack.style.transition = 'none';
+          currentIndex = slides.length;
+          currentTranslate = -currentIndex * getSlideWidth();
+          prevTranslate = currentTranslate;
+          setSliderPosition();
+        }, 600);
+      }
+    }
+
+    sliderWrapper.addEventListener('mouseenter', () => { isPausedCore = true; });
+    sliderWrapper.addEventListener('mouseleave', () => { isPausedCore = false; });
+
     sliderWrapper.addEventListener('touchstart', touchStart, { passive: true });
     sliderWrapper.addEventListener('touchmove', touchMove, { passive: true });
     sliderWrapper.addEventListener('touchend', touchEnd);
     sliderWrapper.addEventListener('mousedown', touchStart);
     sliderWrapper.addEventListener('mousemove', touchMove);
     sliderWrapper.addEventListener('mouseup', touchEnd);
-    sliderWrapper.addEventListener('mouseleave', () => { if(isDragging) touchEnd(); });
+    sliderWrapper.addEventListener('mouseleave', () => { 
+      isPausedCore = false;
+      if (isDragging) touchEnd(); 
+    });
     
     window.addEventListener('resize', () => {
       sliderTrack.style.transition = 'none';
@@ -639,6 +706,8 @@ function init() {
       prevTranslate = currentTranslate;
       setSliderPosition();
     });
+
+    coreServicesInterval = setInterval(autoSwipeCore, 3000);
   }
 
   // ---- Testimonial Carousel ----
@@ -689,6 +758,10 @@ function cleanup() {
   if (carouselInterval) {
     clearInterval(carouselInterval);
     carouselInterval = null;
+  }
+  if (coreServicesInterval) {
+    clearInterval(coreServicesInterval);
+    coreServicesInterval = null;
   }
   if (clickOutsideListener) {
     document.removeEventListener('click', clickOutsideListener);
