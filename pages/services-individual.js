@@ -212,7 +212,7 @@ export default {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 28px; height: 28px; color: var(--accent-primary, #6c63ff);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
               <h3 class="card-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 12px;">Expert CAs</h3>
-              <p class="card-text" style="color: #4b5563; line-height: 1.6; font-size: 0.95rem;">500+ certified CAs with avg. 8 years experience</p>
+              <p class="card-text" style="color: #4b5563; line-height: 1.6; font-size: 0.95rem;">15+ certified CAs with avg. 8 years experience</p>
             </div>
             
             <div class="card card-hover reveal reveal-delay-1" style="text-align: left; padding: 32px 24px; border-top: 4px solid #f59e0b; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">

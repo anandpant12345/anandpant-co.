@@ -46,6 +46,23 @@ window.navigateTo = (hash) => {
   window.location.hash = hash;
 };
 
+window.scrollToTestimonials = (e) => {
+  if (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  const el = document.getElementById('testimonials-section') || document.getElementById('testimonials-heading');
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    window.location.hash = '#/';
+    setTimeout(() => {
+      const target = document.getElementById('testimonials-section') || document.getElementById('testimonials-heading');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 350);
+  }
+};
+
 // ── Shared Components ────────────────────────────────────────────────────────
 
 function renderAnnouncementBar() {

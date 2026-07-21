@@ -3802,11 +3802,12 @@ hr {
     text-align: center;
   }
   .notice-protect-badge {
-    margin: 0 auto 40px;
+    margin: 0 auto 18px !important;
     text-align: left;
   }
   .hero-cta-boxes {
     grid-template-columns: 1fr;
+    gap: 14px !important;
   }
   .floating-widget {
     left: 10px;
@@ -5040,7 +5041,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 120px 20px 70px !important;
   box-sizing: border-box;
 }
 
@@ -5165,10 +5166,10 @@ hr {
 
 @media (max-width: 768px) {
   .contact-office-wrapper {
-    padding: 30px 16px;
+    padding: 100px 16px 50px !important;
   }
   .contact-office-card {
-    padding: 28px 20px;
+    padding: 32px 20px;
     border-radius: 16px;
   }
   .contact-office-title {

@@ -16,9 +16,9 @@ function render() {
             <div class="hero-trust-badge mb-3">
               <span class="badge-text"><strong>10000+</strong> Users</span>
               <span class="badge-sep">|</span>
-              <span class="badge-stars">★★★★★ <strong style="color:var(--color-text);">4.9</strong></span>
+              <span class="badge-stars" style="cursor: pointer;" onclick="window.scrollToTestimonials(event)">★★★★★ <strong style="color:var(--color-text);">4.9</strong></span>
               <span class="badge-sep">|</span>
-              <a href="#/" class="badge-link">See reviews</a>
+              <a href="#testimonials-section" onclick="window.scrollToTestimonials(event)" class="badge-link" style="cursor: pointer;">See reviews</a>
             </div>
             
             <h1 class="heading-xl mb-2" style="font-size: 3.5rem; line-height: 1.15; color: var(--color-primary-dark); margin-bottom: 12px;">
@@ -33,7 +33,7 @@ function render() {
             </div>
             
             <!-- Second Badge: Notice Protect / Notice Shield -->
-            <div class="hero-badge-wrapper" style="margin-bottom: 40px;">
+            <div class="hero-badge-wrapper" style="margin-bottom: 36px;">
               <div class="notice-protect-badge reveal" style="padding: 12px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; display: inline-flex; align-items: center; gap: 0; max-width: none !important;">
                 <div style="display: flex; align-items: center; flex-shrink: 0;">
                   <!-- Shield Icon -->
@@ -398,9 +398,9 @@ function render() {
     </section>
 
     <!-- ===== 6. TESTIMONIALS ===== -->
-    <section class="section section-light">
+    <section class="section section-light" id="testimonials-section" style="scroll-margin-top: 100px;">
       <div class="container">
-        <h2 class="heading-lg text-center" style="margin-bottom: 3rem;">What Our Clients Say</h2>
+        <h2 class="heading-lg text-center" id="testimonials-heading" style="margin-bottom: 3rem; scroll-margin-top: 100px;">What Our Clients Say</h2>
         <div class="carousel-container" id="testimonial-carousel">
           <div class="carousel-track" id="carousel-track">
 
@@ -567,6 +567,20 @@ function render() {
 }
 
 function init() {
+  // Review links click listener
+  const reviewTriggers = document.querySelectorAll('.badge-link, .badge-stars');
+  reviewTriggers.forEach(el => {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const target = document.getElementById('testimonials-section') || document.getElementById('testimonials-heading');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
   // Click-outside listener for plans dropdown
   clickOutsideListener = (e) => {
     const menu = document.querySelector('.plans-dropdown-menu');
