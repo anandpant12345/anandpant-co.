@@ -3493,7 +3493,7 @@ hr {
 }
 
 .mobile-nav-link {
-  font-size: 1.05rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: #0f172a;
   text-decoration: none;
@@ -3532,7 +3532,7 @@ hr {
   gap: 0.75rem;
   text-decoration: none;
   color: #334155;
-  font-size: 0.95rem;
+  font-size: 0.76rem;
   font-weight: 500;
   padding: 6px 4px;
 }
@@ -3568,10 +3568,6 @@ hr {
     max-height: 500px;
     pointer-events: all;
     padding: 8px 0 8px 16px;
-  }
-
-  .nav-links.mobile-open .dropdown-grid {
-    grid-template-columns: 1fr;
   }
 
   .hero {
