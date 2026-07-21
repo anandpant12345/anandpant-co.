@@ -260,12 +260,16 @@ function render() {
       <p class="heading-sm">What best describes you?</p>
       <div class="pricing-options" id="pricing-user-type">
         <div class="pricing-option selected" data-type="individual">
-          <span class="pricing-option-icon">👤</span>
+          <span class="pricing-option-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </span>
           <span class="pricing-option-title">Individual</span>
           <span class="pricing-option-desc">Salaried, freelancer, or investor</span>
         </div>
         <div class="pricing-option" data-type="business">
-          <span class="pricing-option-icon">🏢</span>
+          <span class="pricing-option-icon" style="display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M8 10h.01M16 10h.01M12 14h.01M8 14h.01M16 14h.01"></path></svg>
+          </span>
           <span class="pricing-option-title">Business</span>
           <span class="pricing-option-desc">Company, firm, or enterprise</span>
         </div>

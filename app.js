@@ -9,6 +9,8 @@ const routes = {
   '/calculator':         { module: './pages/tax-calculator.js',      title: 'Tax Calculator' },
   '/gst':                { module: './pages/gst-calculator.js',      title: 'GST Rate Finder' },
   '/pricing':            { module: './pages/pricing.js',             title: 'Pricing' },
+  '/pricing/individual': { module: './pages/services-individual.js', title: 'Individual Pricing' },
+  '/pricing/business':   { module: './pages/services-business.js',   title: 'Business Pricing' },
   '/dashboard':          { module: './pages/dashboard.js',           title: 'Dashboard' },
   '/services/individual':{ module: './pages/services-individual.js', title: 'Individual Services' },
   '/services/business':  { module: './pages/services-business.js',   title: 'Business Services' },
@@ -210,14 +212,14 @@ export function renderNavigation() {
                 <div class="mega-menu-column">
                   <h3>Individual</h3>
                   <a href="#/services/individual" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/></svg>
                     <div class="mega-menu-content">
                       <h4>File ITR</h4>
                       <p>e-File your Income Tax Return</p>
                     </div>
                   </a>
                   <a href="#/services/individual" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="#2563eb" stroke-width="2"/><line x1="16" y1="13" x2="8" y2="13" stroke="#2563eb" stroke-width="2"/><line x1="16" y1="17" x2="8" y2="17" stroke="#2563eb" stroke-width="2"/></svg>
                     <div class="mega-menu-content">
                       <h4>Tax Notices</h4>
                       <p>Expert replies to department</p>
@@ -227,14 +229,14 @@ export function renderNavigation() {
                 <div class="mega-menu-column">
                   <h3>Business</h3>
                   <a href="#/services/business" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5l-6-3v7.38L12 17l6-3.12V6.5l-6 3z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="2" width="16" height="20" rx="2" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><path d="M9 22v-4h6v4" stroke="#2563eb" stroke-width="2"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M8 10h.01M16 10h.01M12 14h.01M8 14h.01M16 14h.01" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/></svg>
                     <div class="mega-menu-content">
                       <h4>Corporate Tax</h4>
                       <p>Filing for private limited companies</p>
                     </div>
                   </a>
                   <a href="#/services/business" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div class="mega-menu-content">
                       <h4>Audit Services</h4>
                       <p>Statutory and tax audits</p>
@@ -250,14 +252,14 @@ export function renderNavigation() {
                 <div class="mega-menu-column">
                   <h3>Compliance</h3>
                   <a href="#/services/business" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5H6v2h2v5h2v-5h2v-2z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="#2563eb" stroke-width="2"/><path d="M12 11v6m-3-3h6" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></svg>
                     <div class="mega-menu-content">
                       <h4>GST Registration</h4>
                       <p>Get your business registered</p>
                     </div>
                   </a>
                   <a href="#/services/business" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="#2563eb" stroke-width="2"/><path d="M12 18v-6m-3 3l3-3 3 3" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div class="mega-menu-content">
                       <h4>GST Returns</h4>
                       <p>GSTR-1, GSTR-3B, GSTR-9</p>
@@ -273,14 +275,14 @@ export function renderNavigation() {
                 <div class="mega-menu-column">
                   <h3>Learn</h3>
                   <a href="#/tax-guides" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#2563eb" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/></svg>
                     <div class="mega-menu-content">
                       <h4>Tax Guides</h4>
                       <p>Step-by-step tutorials</p>
                     </div>
                   </a>
                   <a href="#/calculator" class="mega-menu-item">
-                    <svg class="mega-menu-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    <svg class="mega-menu-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="2" width="16" height="20" rx="2" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><line x1="8" y1="6" x2="16" y2="6" stroke="#2563eb" stroke-width="2"/><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/></svg>
                     <div class="mega-menu-content">
                       <h4>Calculators</h4>
                       <p>HRA, Income Tax, SIP</p>
@@ -296,14 +298,21 @@ export function renderNavigation() {
           <a href="#" class="btn-primary" onclick="event.preventDefault(); window.openLeadModal();">Consult an Expert</a>
         </div>
 
-        <!-- Mobile Nav Toggle -->
-        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
-          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation Side Panel">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round">
+            <line x1="4" y1="6" x2="14" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="18" y2="18"></line>
+          </svg>
         </button>
       </div>
     </header>
 
-    <!-- Mobile Navigation Menu -->
+    <!-- Mobile Side Panel Drawer Backdrop -->
+    <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+
+    <!-- Mobile Side Panel Drawer Menu -->
     <div class="mobile-nav" id="mobile-nav">
       <div class="mobile-nav-header">
         <a href="#/" class="nav-logo" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
@@ -314,104 +323,116 @@ export function renderNavigation() {
           </div>
         </a>
         <button class="mobile-close-btn" id="mobile-close" aria-label="Close Navigation">
-          <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#0f172a"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </div>
       
       <div class="mobile-nav-menu">
+        <!-- 1. Income Tax Section -->
         <div class="mobile-nav-item">
-          <a href="#/services" class="mobile-nav-link" data-toggle="sub-menu">
-            Income Tax <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+          <a href="javascript:void(0)" class="mobile-nav-link" data-toggle="sub-menu">
+            <span>Income Tax</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </a>
           <div class="mobile-sub-menu">
             <a href="#/services/individual" class="mobile-sub-item">
-              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> File ITR
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4" fill="#bfdbfe"/></svg>
+              <span>File ITR</span>
             </a>
             <a href="#/services/individual" class="mobile-sub-item">
-              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg> Tax Notices
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#bfdbfe"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Tax Notices</span>
+            </a>
+            <a href="#/services/business" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" fill="#bfdbfe"/><path d="M9 22v-4h6v4"/></svg>
+              <span>Corporate Tax</span>
+            </a>
+            <a href="#/services/business" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="9" fill="#bfdbfe"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>Audit Services</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. GST Services Section -->
+        <div class="mobile-nav-item">
+          <a href="javascript:void(0)" class="mobile-nav-link" data-toggle="sub-menu">
+            <span>GST Services</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="mobile-sub-menu">
+            <a href="#/services/business" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" fill="#bfdbfe"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 11v6m-3-3h6"/></svg>
+              <span>GST Registration</span>
+            </a>
+            <a href="#/services/business" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#bfdbfe"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6m-3 3l3-3 3 3"/></svg>
+              <span>GST Returns</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Resources Section -->
+        <div class="mobile-nav-item">
+          <a href="javascript:void(0)" class="mobile-nav-link" data-toggle="sub-menu">
+            <span>Resources &amp; Tools</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="mobile-sub-menu">
+            <a href="#/tax-guides" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="#bfdbfe"/></svg>
+              <span>Tax Guides</span>
+            </a>
+            <a href="#/calculator" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" fill="#bfdbfe"/><line x1="8" y1="6" x2="16" y2="6"/></svg>
+              <span>Tax Calculator</span>
+            </a>
+            <a href="#/gst" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="11" cy="11" r="8" fill="#bfdbfe"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>GST Rate Finder</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Pricing Dropdown Section -->
+        <div class="mobile-nav-item">
+          <a href="javascript:void(0)" class="mobile-nav-link" data-toggle="sub-menu">
+            <span>Pricing</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <div class="mobile-sub-menu">
+            <a href="#/services/individual" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4" fill="#bfdbfe"/></svg>
+              <span>Individual Pricing</span>
+            </a>
+            <a href="#/services/business" class="mobile-sub-item">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" fill="#bfdbfe"/><path d="M9 22v-4h6v4"/></svg>
+              <span>Business Pricing</span>
             </a>
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="#/services/business" class="mobile-nav-link" data-toggle="sub-menu">
-            GST <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-          </a>
-          <div class="mobile-sub-menu">
-            <a href="#/services/business" class="mobile-sub-item">
-              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5H6v2h2v5h2v-5h2v-2z"/></svg> GST Registration
-            </a>
-            <a href="#/services/business" class="mobile-sub-item">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> GST Returns
-            </a>
-          </div>
+          <a href="#/about" class="mobile-nav-link"><span>About Us</span></a>
         </div>
-        <div class="mobile-nav-item" style="margin-top: 1rem;">
-          <a href="#/contact" class="btn-primary" style="display: block; text-align: center;" onclick="event.preventDefault(); window.openLeadModal();">Consult an Expert</a>
+        <div class="mobile-nav-item">
+          <a href="#/contact" class="mobile-nav-link"><span>Registered Office &amp; Contact</span></a>
+        </div>
+
+        <!-- 5. CTA Button -->
+        <div class="mobile-nav-item" style="margin-top: 1rem; border-bottom: none;">
+          <a href="#" class="btn-primary" style="display: block; text-align: center; padding: 14px; border-radius: 10px; font-weight: 600;" onclick="event.preventDefault(); window.openLeadModal(); const mn = document.getElementById('mobile-nav'); const mb = document.getElementById('mobile-backdrop'); if(mn) mn.classList.remove('is-open'); if(mb) mb.classList.remove('is-open'); document.body.style.overflow = '';">Consult an Expert</a>
         </div>
       </div>
     </div>
   `;
 
-  // Attach nav HTML to document
-  const navPlaceholder = document.createElement('div');
-  navPlaceholder.innerHTML = navHTML;
-  document.body.prepend(navPlaceholder);
-
-  // JavaScript for Headroom-style sticky scroll transitions
-  const mainNav = document.getElementById('main-nav');
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener('scroll', () => {
-
-    if (window.scrollY > lastScrollY && window.scrollY > 100) {
-      // Scroll down -> hide
-      mainNav.classList.add('nav-hidden');
-    } else {
-      // Scroll up -> show
-      mainNav.classList.remove('nav-hidden');
-    }
-    lastScrollY = window.scrollY;
-  });
-
-  // Removed nav-transparent initial check
-
-  // JavaScript for Mobile Menu
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const mobileClose = document.getElementById('mobile-close');
-  const mobileNav = document.getElementById('mobile-nav');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-  if (mobileToggle && mobileNav) {
-    mobileToggle.addEventListener('click', () => {
-      mobileNav.classList.add('is-open');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
-    });
+  // Attach nav HTML to document once
+  if (!document.getElementById('main-nav-wrapper')) {
+    const navPlaceholder = document.createElement('div');
+    navPlaceholder.id = 'main-nav-wrapper';
+    navPlaceholder.innerHTML = navHTML;
+    document.body.prepend(navPlaceholder);
   }
-
-  if (mobileClose && mobileNav) {
-    mobileClose.addEventListener('click', () => {
-      mobileNav.classList.remove('is-open');
-      document.body.style.overflow = '';
-    });
-  }
-
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const subMenu = link.nextElementSibling;
-      if (subMenu && subMenu.classList.contains('mobile-sub-menu')) {
-        subMenu.classList.toggle('is-open');
-        // Rotate icon
-        const icon = link.querySelector('svg');
-        if (subMenu.classList.contains('is-open')) {
-          icon.style.transform = 'rotate(180deg)';
-        } else {
-          icon.style.transform = 'rotate(0deg)';
-        }
-        icon.style.transition = 'transform 0.3s ease';
-      }
-    });
-  });
 }
 
 
@@ -575,64 +596,91 @@ async function handleRoute() {
 // ── Navigation Interactions ──────────────────────────────────────────────────
 
 function initNavigation() {
-  // Existing Nav Logic
+  // Guarantee nav elements exist in DOM
+  renderNavigation();
+
   const nav = document.getElementById('main-nav');
-  const toggle = document.getElementById('mobile-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  const onScroll = () => {
-    if (window.scrollY > 20) {
-      nav?.classList.add('scrolled');
-    } else {
-      nav?.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      navLinks.classList.toggle('mobile-open');
-      document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
-    });
+  if (nav && !nav.dataset.scrollBound) {
+    nav.dataset.scrollBound = 'true';
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        nav.classList.add('nav-hidden');
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
+      lastScrollY = window.scrollY;
+    }, { passive: true });
   }
 
-  document.querySelectorAll('.nav-dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 992) {
-        e.preventDefault();
-        const parent = link.closest('.nav-dropdown');
-        document.querySelectorAll('.nav-dropdown').forEach(dd => {
-          if (dd !== parent) dd.classList.remove('open');
-        });
-        parent.classList.toggle('open');
+  // Mobile 3-Dots Side Drawer Panel Handlers
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileClose = document.getElementById('mobile-close');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mobileBackdrop = document.getElementById('mobile-backdrop');
+
+  const openSidePanel = (e) => {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    if (mobileNav) mobileNav.classList.add('is-open');
+    if (mobileBackdrop) mobileBackdrop.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeSidePanel = (e) => {
+    if (e) { e.stopPropagation(); }
+    if (mobileNav) mobileNav.classList.remove('is-open');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('is-open');
+    document.body.style.overflow = '';
+  };
+
+  if (mobileToggle) mobileToggle.onclick = openSidePanel;
+  if (mobileClose) mobileClose.onclick = closeSidePanel;
+  if (mobileBackdrop) mobileBackdrop.onclick = closeSidePanel;
+
+  // Sub-menu accordion toggles in mobile drawer
+  document.querySelectorAll('[data-toggle="sub-menu"]').forEach(link => {
+    link.style.cursor = 'pointer';
+    link.onclick = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parentItem = link.closest('.mobile-nav-item');
+      const subMenu = parentItem?.querySelector('.mobile-sub-menu');
+      const arrowIcon = link.querySelector('svg');
+      
+      if (subMenu) {
+        const isExpanded = subMenu.classList.contains('is-open');
+        if (isExpanded) {
+          subMenu.classList.remove('is-open');
+          if (arrowIcon) arrowIcon.style.transform = 'rotate(0deg)';
+        } else {
+          // Collapse other sub-menus first
+          document.querySelectorAll('.mobile-sub-menu').forEach(sm => sm.classList.remove('is-open'));
+          document.querySelectorAll('[data-toggle="sub-menu"] svg').forEach(svg => svg.style.transform = 'rotate(0deg)');
+
+          subMenu.classList.add('is-open');
+          if (arrowIcon) arrowIcon.style.transform = 'rotate(180deg)';
+        }
       }
-    });
+    };
   });
 
-  document.querySelectorAll('.mega-menu-item, .nav-links > .nav-link:not([data-dropdown])').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelectorAll('.nav-dropdown').forEach(dd => dd.classList.remove('open'));
-    });
-  });
-
-
-
-  // Close mobile menu on actual link clicks
+  // Direct page navigation links inside mobile drawer
   document.querySelectorAll('.mobile-sub-item, .mobile-nav-link:not([data-toggle="sub-menu"])').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks?.classList.contains('mobile-open')) {
-        toggle?.classList.remove('active');
-        navLinks.classList.remove('mobile-open');
+    link.style.cursor = 'pointer';
+    link.onclick = (e) => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeSidePanel(e);
+        window.location.hash = href;
       }
-      const mobileNav = document.getElementById('mobile-nav');
-      if (mobileNav?.classList.contains('is-open')) {
-        mobileNav.classList.remove('is-open');
-      }
-      // Always restore body scrolling on redirect clicks
-      document.body.style.overflow = '';
-    });
+    };
   });
 
   // Google Sheet Web App Submission Helper

@@ -172,36 +172,40 @@ export default {
                 </div>
               </div>
 
-              <div class="card mb-4" style="padding: 24px;">
+              <div class="card mb-4 tax-breakdown-card" style="padding: 24px;">
                 <h3 class="heading-sm mb-3">New Regime Breakdown</h3>
-                <table class="slab-table" style="width:100%; text-align:left; border-collapse:collapse;">
-                  <thead>
-                    <tr style="border-bottom:1px solid var(--color-border);">
-                      <th class="py-2">Income Slab</th>
-                      <th class="py-2">Rate</th>
-                      <th class="py-2 text-right">Tax</th>
-                    </tr>
-                  </thead>
-                  <tbody id="slab-tbody-new" class="font-mono text-sm">
-                    <!-- Dynamic rows -->
-                  </tbody>
-                </table>
+                <div class="slab-table-wrapper">
+                  <table class="slab-table" style="width:100%; text-align:left; border-collapse:collapse;">
+                    <thead>
+                      <tr style="border-bottom:1px solid var(--color-border);">
+                        <th class="py-2" style="width: 52%;">Income Slab</th>
+                        <th class="py-2 text-center" style="width: 20%;">Rate</th>
+                        <th class="py-2 text-right" style="width: 28%;">Tax</th>
+                      </tr>
+                    </thead>
+                    <tbody id="slab-tbody-new" class="font-mono text-sm">
+                      <!-- Dynamic rows -->
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
-              <div class="card mb-4" style="padding: 24px;">
+              <div class="card mb-4 tax-breakdown-card" style="padding: 24px;">
                 <h3 class="heading-sm mb-3">Old Regime Breakdown</h3>
-                <table class="slab-table" style="width:100%; text-align:left; border-collapse:collapse;">
-                  <thead>
-                    <tr style="border-bottom:1px solid var(--color-border);">
-                      <th class="py-2">Income Slab</th>
-                      <th class="py-2">Rate</th>
-                      <th class="py-2 text-right">Tax</th>
-                    </tr>
-                  </thead>
-                  <tbody id="slab-tbody-old" class="font-mono text-sm">
-                    <!-- Dynamic rows -->
-                  </tbody>
-                </table>
+                <div class="slab-table-wrapper">
+                  <table class="slab-table" style="width:100%; text-align:left; border-collapse:collapse;">
+                    <thead>
+                      <tr style="border-bottom:1px solid var(--color-border);">
+                        <th class="py-2" style="width: 52%;">Income Slab</th>
+                        <th class="py-2 text-center" style="width: 20%;">Rate</th>
+                        <th class="py-2 text-right" style="width: 28%;">Tax</th>
+                      </tr>
+                    </thead>
+                    <tbody id="slab-tbody-old" class="font-mono text-sm">
+                      <!-- Dynamic rows -->
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div class="text-center">
@@ -433,26 +437,26 @@ export default {
         breakdown.forEach(row => {
           html += `
             <tr style="border-bottom: 1px solid var(--color-border);">
-              <td class="py-2">${row.slab}</td>
-              <td class="py-2">${row.rate}</td>
-              <td class="py-2 text-right">${format(row.tax)}</td>
+              <td class="py-2" style="word-break: break-word;">${row.slab}</td>
+              <td class="py-2 text-center" style="white-space: nowrap;">${row.rate}</td>
+              <td class="py-2 text-right" style="white-space: nowrap;">${format(row.tax)}</td>
             </tr>
           `;
         });
         if(cgTax > 0) {
-          html += `<tr style="border-bottom: 1px solid var(--color-border);"><td class="py-2">Capital Gains Tax</td><td class="py-2">-</td><td class="py-2 text-right">${format(cgTax)}</td></tr>`;
+          html += `<tr style="border-bottom: 1px solid var(--color-border);"><td class="py-2">Capital Gains Tax</td><td class="py-2 text-center" style="white-space: nowrap;">-</td><td class="py-2 text-right" style="white-space: nowrap;">${format(cgTax)}</td></tr>`;
         }
         if(surcharge > 0) {
-          html += `<tr style="border-bottom: 1px solid var(--color-border);"><td class="py-2">Surcharge</td><td class="py-2">-</td><td class="py-2 text-right">${format(surcharge)}</td></tr>`;
+          html += `<tr style="border-bottom: 1px solid var(--color-border);"><td class="py-2">Surcharge</td><td class="py-2 text-center" style="white-space: nowrap;">-</td><td class="py-2 text-right" style="white-space: nowrap;">${format(surcharge)}</td></tr>`;
         }
         if(cess > 0) {
-          html += `<tr style="border-bottom: 1px solid var(--color-border);"><td class="py-2">Health & Ed. Cess (4%)</td><td class="py-2">4%</td><td class="py-2 text-right">${format(cess)}</td></tr>`;
+          html += `<tr style="border-bottom: 1px solid var(--color-border);"><td class="py-2">Health &amp; Ed. Cess (4%)</td><td class="py-2 text-center" style="white-space: nowrap;">4%</td><td class="py-2 text-right" style="white-space: nowrap;">${format(cess)}</td></tr>`;
         }
         html += `
           <tr style="font-weight: 700; background: var(--bg-secondary);">
-            <td class="py-2">Total Tax Payable</td>
-            <td class="py-2"></td>
-            <td class="py-2 text-right text-success">${format(netTotal)}</td>
+            <td class="py-2" style="font-weight: 700;">Total Tax Payable</td>
+            <td class="py-2 text-center">-</td>
+            <td class="py-2 text-right text-success" style="font-weight: 700; white-space: nowrap;">${format(netTotal)}</td>
           </tr>
         `;
         tbody.innerHTML = html;
